@@ -1,0 +1,55 @@
+.newCollection {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    height: 100%;
+
+    .newCollection-img {
+        img {
+            width: 100%;
+        }
+    }
+
+
+    .newCollection-title {
+        background-image: url("https://fashion.minimog.co/cdn/shop/files/img-2-min_1.jpg?v=1708661534&width=1600");
+        background-position: center;
+        background-size: cover;
+
+        a {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            height: 100%;
+
+            h6 {
+                font-weight: 400;
+                font-size: 20px;
+            }
+
+            h2 {
+                font-size: 40px;
+                font-weight: 400;
+            }
+        }
+
+    }
+}
+
+@media (max-width:480px) {
+    .newCollection-title {
+        height: 70vh !important;
+    }
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+
+    .newCollection-img,
+    .newCollection-title {
+        height: 70vh !important;
+    }
+}

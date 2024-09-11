@@ -1,0 +1,119 @@
+.contact-section {
+    padding-bottom: 100px;
+
+    .contact-heading {
+        margin-top: 50px;
+
+        h2 {
+            font-size: 40px;
+            font-weight: 400;
+        }
+
+        p {
+            margin-top: 30px;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+
+    .content {
+        flex-wrap: wrap;
+        column-gap: 2rem;
+        margin-top: 50px;
+
+        form {
+            justify-content: space-between;
+            column-gap: .5rem;
+            row-gap: 1.5rem;
+
+            input {
+                padding: 10px;
+            }
+
+            .pass-input {
+                flex: 1;
+            }
+
+            textarea {
+                height: 200px;
+            }
+
+            .forgetPassword {
+                display: inline-block;
+                background-color: rgba(0, 0, 0, 0.891);
+                color: white;
+                padding: 10px 20px !important;
+                width: fit-content;
+                height: fit-content;
+                margin-top: 10px;
+                border-radius: 5px;
+                border: none;
+                font-weight: 600;
+                text-decoration: none;
+                text-align: center;
+                transition: all .4s ease;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.03);
+                }
+            }
+        }
+
+        .info {
+            flex: 1;
+
+            h5 {
+                font-weight: 500;
+            }
+
+            div {
+                margin-bottom: 30px;
+            }
+
+            svg {
+                color: black;
+                margin-right: 10px;
+            }
+
+            p {
+                color: rgba(0, 0, 0, 0.651);
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width:480px) {
+
+    .contact-section .content form {
+        flex-direction: column;
+    }
+
+    .info {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width:481px) and (max-width: 767px) {
+    .contact-section .content form {
+        flex-direction: column;
+    }
+
+    .info {
+        margin-top: 40px;
+    }
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+    .contact-section .content form {
+        flex-direction: column;
+    }
+
+    .info {
+        margin-top: 50px;
+    }
+}

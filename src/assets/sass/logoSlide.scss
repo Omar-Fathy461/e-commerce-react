@@ -1,0 +1,60 @@
+h3 {
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.brands {
+    overflow: hidden;
+    background-color: white;
+    padding-block: 20px;
+    white-space: nowrap;
+    position: relative;
+    margin-bottom: 100px;
+
+    .logos_slide {
+        display: inline-block;
+        animation: slideLogos 13s infinite linear;
+
+        img {
+            height: 100px;
+            margin-inline: 50px;
+        }
+    }
+
+    &::after,
+    &::before {
+        position: absolute;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        z-index: 5;
+        content: "";
+    }
+
+    &::before {
+        background-image: linear-gradient(to left, transparent, black);
+        left: 0;
+    }
+
+    &::after {
+        background-image: linear-gradient(to right, transparent, black);
+        right: 0;
+    }
+}
+
+@keyframes slideLogos {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+@media (max-width:480px) {
+    .brands {
+        padding-block: 0;
+    }
+}

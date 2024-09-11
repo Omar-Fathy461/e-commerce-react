@@ -1,0 +1,47 @@
+.checkout {
+    display: flex;
+    justify-content: center;
+}
+
+.express {
+
+    .options {
+        display: flex;
+
+        .shop-pay {
+            text-align: center;
+            margin-top: 30px;
+
+            .shopPay-link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                width: 100%;
+                padding: 10px;
+                color: black;
+                border: 1px solid rgba(0, 0, 0, 0.164);
+                border-radius: 5px;
+                column-gap: 10px;
+
+                img {
+                    width: 80px;
+                }
+
+                .google-pay {
+                    width: 50px;
+                }
+            }
+
+            .moreOptions {
+                text-align: center;
+                margin-top: 30px;
+
+                a {
+                    color: rgba(0, 0, 0, 0.678);
+                }
+            }
+
+        }
+    }
+}

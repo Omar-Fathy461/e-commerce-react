@@ -1,0 +1,64 @@
+.main {
+    overflow-x: hidden;
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+
+
+
+        a {
+            padding-inline: 0;
+
+            .shirt,
+            .hoodie {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center top;
+                height: 80dvh;
+                position: relative;
+
+
+                .hero-text {
+                    position: absolute;
+                    left: 5%;
+                    bottom: 10%;
+                    color: white;
+                    text-decoration: none;
+
+                    h5 {
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+
+                    .hero-title {
+                        font-size: 50px;
+                        font-weight: 500;
+                        margin-top: 10px;
+                    }
+
+                    .Buttons {
+                        color: red;
+                    }
+                }
+            }
+
+            .shirt {
+                background-image: url("https://fashion.minimog.co/cdn/shop/files/banner-1-min_d5719162-5a14-4b7a-856e-3fdc6a7c7a19.jpg?v=1708656751&width=1600");
+            }
+
+            .hoodie {
+                background-image: url("https://fashion.minimog.co/cdn/shop/files/banner-2-min_955f5e5a-5bc9-4863-949d-5fc3d008ce13.jpg?v=1708656762&width=1400");
+            }
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width:480px) {
+    .hero-text {
+        .hero-title {
+            font-size: 45px !important;
+        }
+    }
+}

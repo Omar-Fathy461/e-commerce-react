@@ -1,0 +1,105 @@
+.login {
+    padding-bottom: 100px;
+
+    .login-head {
+        margin-top: 50px;
+
+        h2 {
+            font-size: 40px;
+            font-weight: 400;
+        }
+
+        p {
+            margin-top: 30px;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 3rem;
+        margin-block: 100px 50px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+
+            input {
+                padding: 10px;
+            }
+
+            .group {
+                margin-bottom: 30px;
+            }
+
+            .forgetPass {
+                color: black;
+                width: fit-content;
+            }
+
+            .forgetPassword {
+                text-decoration: none;
+                display: inline-block;
+                background-color: rgba(0, 0, 0, 0.891);
+                color: white;
+                padding: 10px 20px !important;
+                width: fit-content;
+                height: fit-content;
+                margin-top: 10px;
+                border-radius: 5px;
+                border: none;
+                font-weight: 600;
+                text-decoration: none;
+                text-align: center;
+                transition: all .4s ease;
+                cursor: pointer;
+            }
+
+            .forgetPassword:nth-child(2) {
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+button:hover,
+.forgetPassword:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width:480px) {
+    .login .content {
+        column-gap: 0;
+    }
+
+    .login .content form {
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width:481px) and (max-width:767px) {
+    .login .content {
+        column-gap: 0;
+    }
+
+    .login .content form {
+        margin-bottom: 50px;
+    }
+
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .login .content {
+        column-gap: 0;
+    }
+
+    .login .content form {
+        margin-bottom: 50px !important;
+    }
+}

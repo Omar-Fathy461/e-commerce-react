@@ -1,0 +1,136 @@
+.sign {
+    padding-bottom: 100px;
+
+    .content {
+
+        .sign-head {
+            h2 {
+                font-size: 40px;
+                font-weight: 400;
+            }
+
+            p {
+                margin-top: 30px;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 1.5rem;
+
+            input,
+            button,
+            a {
+                border-radius: 5px;
+                padding: 10px;
+
+            }
+
+            input {
+                border: 1px solid rgba(0, 0, 0, 0.154);
+            }
+
+            button {
+                background-color: black;
+                color: white;
+                border: none;
+                font-weight: 600;
+                transition: transform .4s ease;
+            }
+
+            p {
+                margin-block: 5px;
+            }
+
+            button:hover {
+                transform: scale(1.03);
+            }
+
+            a {
+                text-decoration: none;
+                text-align: center;
+                font-weight: 500;
+                border: 1px solid rgba(0, 0, 0, 0.445);
+                color: black;
+                transition: all .4s ease;
+            }
+
+            a:hover {
+                background-color: black;
+                color: white;
+                transform: scale(1.03);
+            }
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .sign {
+        .content {
+            form {
+                align-items: normal;
+                margin-inline: 20px;
+
+                p {
+                    font-size: 12px;
+                }
+
+                .login-btn,
+                button {
+                    align-self: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:481px) and (max-width: 767px) {
+    .sign {
+        .content {
+            form {
+                align-items: normal;
+                margin-inline: 20px;
+
+                p {
+                    font-size: 12px;
+                }
+
+                .login-btn,
+                button {
+                    align-self: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+
+    .sign {
+        .content {
+            form {
+                align-items: center;
+                margin-inline: 20px;
+
+                p {
+                    font-size: 12px;
+                }
+
+                .login-btn,
+                button {
+                    align-self: center;
+                    // width: 100%;
+                }
+            }
+        }
+    }
+}

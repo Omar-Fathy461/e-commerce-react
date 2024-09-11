@@ -1,0 +1,224 @@
+.coastalEdition-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 100px;
+
+    h2 {
+        font-size: 65px;
+        font-weight: 400;
+    }
+
+    p {
+        width: 500px;
+    }
+}
+
+.coastalEdition {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+
+
+    .shirt {
+        background-image: url("https://fashion.minimog.co/cdn/shop/files/lookbook-1-min_a0c98310-b427-4469-a0ac-4f777a89b50e.jpg?v=1708671224&width=1500");
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        height: 80dvh;
+        position: relative;
+
+        .white-circle {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+
+            .shirt-card {
+                background-color: white;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-85%, 4%);
+                width: 150px;
+                padding: 10px;
+                border-radius: 10px;
+                opacity: 0;
+                transition: opacity .4s ease-in-out;
+                cursor: pointer;
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    margin-bottom: 0;
+                }
+
+            }
+        }
+
+        .white-circle:hover {
+            .shirt-card {
+                opacity: 1;
+            }
+        }
+    }
+
+    .pant {
+        background-image: url("https://fashion.minimog.co/cdn/shop/files/lookbook-2-min.jpg?v=1708671289&width=1500");
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        height: 80dvh;
+        flex: 1;
+        position: relative;
+
+        .white-circle2 {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+
+            .t-shirt-card {
+                background-color: white;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-85%, 4%);
+                width: 150px;
+                padding: 10px;
+                border-radius: 10px;
+                opacity: 0;
+                transition: opacity .4s ease-in-out;
+                cursor: pointer;
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .white-circle2:hover {
+            .t-shirt-card {
+                opacity: 1;
+            }
+        }
+
+        .white-circle3 {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+
+            .pant-card {
+                background-color: white;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-85%, 4%);
+                width: 150px;
+                padding: 10px;
+                border-radius: 10px;
+                opacity: 0;
+                transition: opacity .4s ease-in-out;
+                cursor: pointer;
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+
+        }
+
+        .white-circle3:hover {
+            .pant-card {
+                opacity: 1;
+            }
+        }
+    }
+
+    .product-title {
+        font-size: 15px;
+        margin-block: 8px;
+    }
+}
+
+@media (max-width:480px) {
+    .coastalEdition-heading {
+        h2 {
+            font-size: 30px;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 15px;
+            width: fit-content;
+        }
+    }
+
+    .coastalEdition {
+        overflow: hidden;
+
+        .shirt {
+            width: 400px;
+        }
+
+        .shirt,
+        .pant {
+            height: 50vh !important;
+        }
+    }
+
+    .shirt-card,
+    .t-shirt-card,
+    .pant-card {
+        width: 100px !important;
+        height: fit-content;
+    }
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+    .coastalEdition {
+        overflow: hidden;
+
+
+        .shirt,
+        .pant {
+            height: 50vh !important;
+        }
+    }
+
+    .shirt-card,
+    .t-shirt-card,
+    .pant-card {
+        width: 100px !important;
+        height: fit-content;
+    }
+}

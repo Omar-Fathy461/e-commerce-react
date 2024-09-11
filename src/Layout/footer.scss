@@ -1,0 +1,188 @@
+.footer {
+
+    .content {
+        background-color: black;
+        color: white;
+        padding-block: 50px;
+
+        .row {
+            .footer-head {
+
+                h2,
+                .email-input {
+                    margin-bottom: 30px;
+                }
+
+                h2 {
+                    font-size: 40px;
+                    font-weight: 400;
+                }
+
+                .email-input {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: rgba(255, 255, 255, 0.343) 1px solid;
+                    padding: 10px;
+
+                    input {
+                        background-color: transparent;
+                        color: rgb(141, 136, 136);
+                        font-size: 20px;
+                        border: none;
+                        outline: none;
+                    }
+
+                    svg {
+                        text-align: end;
+                        cursor: pointer;
+                    }
+                }
+
+                p {
+                    color: rgb(177, 172, 172);
+                }
+            }
+
+            .footer-links {
+
+                .contactUs,
+                .getHelp {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: rgb(186, 180, 180);
+                    font-weight: 400;
+                    padding-block-end: 5px;
+                    position: relative;
+                    width: fit-content;
+
+
+                }
+
+                a::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: rgba(255, 255, 255, 0.155);
+                    transition: width .5s ease;
+                }
+
+                a:hover::after {
+                    width: 100%;
+                }
+
+                .contactUs,
+                .getHelp,
+                .follow {
+                    h5 {
+                        font-weight: 400;
+
+                        a {
+                            color: white;
+                        }
+
+                        a::after {
+                            background-color: transparent;
+                        }
+                    }
+                }
+
+                .follow {
+                    a::after {
+                        background-color: transparent;
+                    }
+
+                    .media {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-top: 20px;
+                    }
+
+                    svg {
+                        font-size: 20px;
+                        color: rgba(255, 255, 255, 0.792);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .footer-head {
+        h2 {
+            font-size: 26px !important;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        .email-input {
+            padding: 7px;
+        }
+    }
+
+    .footer-links {
+
+        .contactUs,
+        .getHelp,
+        .follow {
+            width: 100%;
+            margin-bottom: 10px;
+
+            a {
+                font-size: 15px;
+            }
+
+            h5 {
+                a {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .follow {
+            .media {
+                justify-content: start !important;
+                gap: 1.5rem;
+
+                svg {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:481px) and (max-width: 767px) {
+    .footer-links {
+        justify-content: space-between;
+    }
+
+    .follow {
+        .media {
+            gap: 1rem !important;
+        }
+    }
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+    .footer-links {
+        justify-content: space-between;
+    }
+
+    .follow {
+        .media {
+            gap: 1rem !important;
+        }
+    }
+}

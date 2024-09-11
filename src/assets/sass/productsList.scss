@@ -1,0 +1,296 @@
+.productsList {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+    .sidbar {
+
+        h5 {
+            margin-top: 50px;
+        }
+
+        .color-products {
+            display: flex;
+            flex-wrap: wrap;
+
+            button {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                border: none;
+                margin-top: 10px;
+                margin-right: 15px;
+            }
+
+            .black {
+                background-color: black;
+            }
+
+            .black:hover::before,
+            .white:hover::before,
+            .grey:hover::before,
+            .heathered-grey:hover::before,
+            .navy:hover::before,
+            .brown:hover::before,
+            .jean-blue:hover::before,
+            .toasted-coconut:hover::before,
+            .cream:hover::before,
+            .tan:hover::before,
+            .coca:hover::before,
+            .toasted-coconut:hover::before,
+            .heathered-green:hover::before {
+                content: "";
+                color: white;
+                background-color: black;
+                font-size: 13px;
+                padding: 3px;
+                border-radius: 5px;
+                width: 60px;
+                text-align: center;
+                position: absolute;
+                top: -50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .black:hover::before {
+                content: "Black";
+            }
+
+            .white:hover::before {
+                content: "White";
+            }
+
+            .grey:hover::before {
+                content: "Grey";
+            }
+
+            .tan:hover::before {
+                content: "Tan";
+            }
+
+            .navy:hover::before {
+                content: "Navy";
+            }
+
+            .cream:hover::before {
+                content: "Cream";
+            }
+
+            .coca:hover::before {
+                content: "Coca";
+            }
+
+            .toasted-coconut:hover::before {
+                content: "Toasted Coconut";
+            }
+
+            .toasted-coconut:hover::before {
+                content: "Toasted Coconut";
+            }
+
+            .jean-blue:hover::before {
+                content: "Jean Blue";
+            }
+
+            .heathered-green:hover::before {
+                content: "Heathered Green";
+            }
+
+            .heathered-grey:hover::before {
+                content: "Heathered Grey";
+            }
+
+            .brown:hover::before {
+                content: "Brown";
+            }
+
+            .white {
+                background-color: white;
+                border: 1px solid rgba(0, 0, 0, 0.205);
+            }
+
+            .grey {
+                background-color: #e0e0e0;
+            }
+
+            .tan {
+                background-color: #e9d1bf;
+            }
+
+            .heathered-green {
+                background-color: #453f2c;
+            }
+
+            .coca {
+                background-color: #a8785f;
+            }
+
+            .heathered-grey {
+                background-color: #a0aaab;
+            }
+
+            .navy {
+                background-color: #26343b;
+            }
+
+            .heathered-green {
+                background-color: #453f2c;
+            }
+
+            .brown {
+                background-color: #836953;
+            }
+
+            .jean-blue {
+                background-color: #425d8c;
+            }
+
+            .toasted-coconut {
+                background-color: #735438;
+            }
+
+            .cream {
+                background-color: #f1f2e2;
+            }
+        }
+
+        .price-filters {
+            button {
+                display: inline-block;
+                background-color: rgba(0, 0, 0, 0.891);
+                color: white;
+                padding: 5px 10px !important;
+                margin-right: 10px;
+                width: fit-content;
+                height: fit-content;
+                margin-top: 10px;
+                border-radius: 5px;
+                border: none;
+                font-weight: 500;
+                font-size: 15px;
+                text-decoration: none;
+                text-align: center;
+                transition: all .4s ease;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.03);
+                }
+            }
+        }
+    }
+
+    .myProducts {
+        display: flex;
+        column-gap: 1.5rem;
+        row-gap: 4rem;
+        flex-wrap: wrap;
+        flex: 1;
+        height: fit-content;
+        margin-bottom: 100px;
+
+        .filter-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .product-card {
+            width: 250px;
+            height: 333.53px;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                transition: opacity .4s ease-in-out;
+            }
+
+            h6 {
+                margin-block: 5px;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        .product-card:hover {
+
+            img {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .productsList {
+        justify-content: center;
+    }
+
+    .sidbar {
+        margin-bottom: 50px;
+        text-align: center;
+
+        .color-products {
+            justify-content: center;
+        }
+    }
+
+    .myProducts {
+        justify-content: center;
+    }
+}
+
+@media (min-width:481px) and (max-width: 767px) {
+    .productsList {
+        justify-content: center;
+    }
+
+    .sidbar {
+        margin-bottom: 50px;
+        text-align: center;
+
+        .color-products {
+            justify-content: center;
+        }
+    }
+
+    .myProducts {
+        column-gap: 0 !important;
+        justify-content: space-around !important;
+    }
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+    .productsList {
+        justify-content: center;
+    }
+
+    .sidbar {
+        margin-bottom: 50px;
+        text-align: center;
+
+        .color-products {
+            justify-content: center;
+        }
+    }
+
+    .myProducts {
+        justify-content: center !important;
+    }
+
+}
+
+@media (min-width:992px) and (max-width: 1199px) {
+    .productsList .myProducts {
+        column-gap: .5rem;
+    }
+}

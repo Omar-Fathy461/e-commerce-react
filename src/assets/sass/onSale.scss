@@ -1,0 +1,62 @@
+.onSale {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+    margin-block: 100px;
+
+    .onSale-title {
+
+
+
+        h6 {
+            font-weight: 400;
+            font-size: 20px;
+            padding-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 40px;
+            font-weight: 400;
+        }
+    }
+
+    .onSale-img {
+        display: flex;
+        flex: 1;
+        gap: 1rem;
+
+        div {
+            flex: 1;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .onSale {
+        flex-wrap: wrap;
+
+        .onSale-title {
+            margin-bottom: 50px !important;
+
+
+            h6 {
+                font-weight: 400;
+                font-size: 20px;
+                padding-bottom: 50px;
+            }
+
+            h2 {
+                font-size: 30px;
+                font-weight: 400;
+            }
+        }
+
+        .onSale-img {
+            gap: .5rem;
+        }
+    }
+}

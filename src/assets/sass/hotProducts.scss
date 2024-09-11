@@ -1,0 +1,69 @@
+.hot-products {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-block: 50px;
+
+    .title-content {
+
+        h6,
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        h6 {
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 40px;
+            font-weight: 400;
+        }
+
+        .accordions {
+            div {
+                margin-block: 10px;
+                cursor: pointer;
+
+                h3 {
+                    font-size: 25px;
+                    font-weight: 400;
+                }
+
+                p {
+                    opacity: 0;
+                    transition: opacity .4s ease;
+                    width: 500px;
+                }
+
+            }
+
+            div:hover {
+
+                p {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .content-img {
+        flex: 1;
+
+        img {
+            width: 100%;
+
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .title-content {
+        h2 {
+            font-size: 35px !important;
+
+        }
+    }
+}

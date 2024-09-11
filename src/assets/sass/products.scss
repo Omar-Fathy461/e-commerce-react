@@ -1,0 +1,37 @@
+.products-heading {
+    padding-block: 100px 20px;
+
+    h2 {
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+    p {
+        color: rgb(107, 105, 105);
+        font-size: 17px;
+    }
+}
+
+.collections {
+    padding-block-end: 70px;
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 1.5rem;
+
+        .product-card {
+            .collection {
+                position: relative;
+            }
+        }
+    }
+}
+
+@media (max-width:480px) {
+
+    .products-heading,
+    .collections {
+        margin-inline: 15px;
+    }
+}

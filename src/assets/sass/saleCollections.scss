@@ -1,0 +1,46 @@
+.saleCollections {
+    margin-block: 100px;
+
+    .saleCollections-cards {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 1.5rem;
+
+        div {
+            // flex: 1;
+            grid-column: span 4;
+            width: 100%;
+            overflow: hidden;
+
+            h5,
+            p {
+                margin-top: 15px;
+            }
+
+            span {
+                display: block;
+                overflow: hidden;
+            }
+
+            img {
+                width: 100%;
+                transition: transform .4s ease;
+            }
+
+            img:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .saleCollections {
+        .saleCollections-cards {
+            div {
+                grid-column: span 12;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

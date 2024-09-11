@@ -1,0 +1,24 @@
+.headProductsList {
+    background-image: url("https://fashion.minimog.co/cdn/shop/files/category-banner-min.jpg?v=1709216744&width=3840");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    align-items: center;
+
+    p {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        svg {
+            font-size: 13px;
+            margin-left: 10px;
+        }
+    }
+}

@@ -1,5 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import './App.scss'
+import 'animate.css';
+
 
 // components
 import RootLayout from "./components/RootLayout"

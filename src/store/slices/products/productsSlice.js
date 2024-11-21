@@ -12,7 +12,21 @@ import AxiosConfig from "../../../utils/AxiosConfig"
 //     return response.data;
 // })
 
-const getProducts = createAsyncThunk("products/getProducts", async ({ categoryName, color }) => {
+// const getProducts = createAsyncThunk("products/getProducts", async ({ categoryName, color }) => {
+//     let params = {
+//         category: `eq.${categoryName}`
+//     };
+
+//     if (color) {
+//         params.color = `ilike.%${color}%`;
+//     }
+
+//     const response = await AxiosConfig.get(`products`, { params });
+//     return response.data;
+// });
+
+const getProducts = createAsyncThunk("products/getProducts", async ({ categoryName, color }, thunkAPI) => {
+    const {rejectWithValue} = thunkAPI;
     let params = {
         category: `eq.${categoryName}`
     };
@@ -21,8 +35,12 @@ const getProducts = createAsyncThunk("products/getProducts", async ({ categoryNa
         params.color = `ilike.%${color}%`;
     }
 
-    const response = await AxiosConfig.get(`products`, { params });
-    return response.data;
+    try{
+        const {data} = await AxiosConfig.get(`products`, { params });
+        return data;
+    }catch(error){
+        return rejectWithValue(error.data.message)
+    }
 });
 
 

@@ -2,8 +2,8 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import logInSchema from "../Validations/logInSchema"
-import { useDispatch } from "react-redux"
-import { login } from "../store/slices/sign/authSlice"
+// import { useDispatch } from "react-redux"
+// import { login } from "../store/slices/sign/authSlice"
 import { ToastContainer } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from "react-router-dom"
@@ -17,22 +17,22 @@ const LogIn = () => {
     const [isForget, setIsForget] = useState(false)
     const [heading, setHeading] = useState(false)
     const { register, handleSubmit, formState: { errors } } = useForm({ mode: "onBlur", resolver: zodResolver(logInSchema), })
-    // const onSubmitData = (data) => console.log(data)
+    const onSubmitData = (data) => console.log(data)
 
     const handleClick = () => {
-        setIsForget(!isForget)
+        setIsForget(state => !state)
         handleText()
     }
     const handleText = () => {
-        setHeading(!heading)
+        setHeading(state => !state)
     }
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     // const { loading, error } = useSelector((state) => state.authSlice)
 
-    const onSubmitData = async (data) => {
-        dispatch(login(data))
-    }
+    // const onSubmitData = async (data) => {
+    //     dispatch(login(data))
+    // }
 
 
 
@@ -85,7 +85,7 @@ const LogIn = () => {
                                         </Form.Group>
                                         <Link className="forgetPass" onClick={handleClick}>Forgot your password?</Link>
                                         <Button className="col-4 forgetPassword" type="submit">
-                                            Sign Up
+                                            Login
                                         </Button>
 
                                     </>

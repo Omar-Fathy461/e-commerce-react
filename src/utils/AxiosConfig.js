@@ -10,7 +10,6 @@ const AxiosConfig = axios.create({
     headers:{
         apikey,
         "Content-Type": "application/json",
-        
     }
 });
 // Add a response interceptor
@@ -27,4 +26,4 @@ AxiosConfig.interceptors.response.use(function (response) {
     return Promise.reject(error);
     });
 
-export default AxiosConfig
+export default AxiosConfig;

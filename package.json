@@ -17,6 +17,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@hookform/resolvers": "^3.9.0",
     "@reduxjs/toolkit": "^2.2.7",
+    "animate.css": "^4.1.1",
     "axios": "^1.7.4",
     "bootstrap": "^5.3.3",
     "framer-motion": "^11.3.29",

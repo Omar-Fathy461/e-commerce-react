@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import AxiosConfig from "../../../utils/AxiosConfig";
 
-// الحصول على تفاصيل المنتج
 const getProductDetails = async (id) => {
     try {
         const response = await AxiosConfig.get(`products?id=eq.${id}`);
@@ -24,24 +23,20 @@ const getProductDetails = async (id) => {
 const wishlistAction = createAsyncThunk("wishlist/wishlistAction", async (id, thunkAPI) => {
     const { rejectWithValue } = thunkAPI;
     try {
-        // الحصول على productId و title من جدول المنتجات
         const productDetails = await getProductDetails(id);
 
         if (!productDetails) {
             throw new Error("Product details are undefined");
         }
 
-        // تحقق من وجود العنصر في الـ wishlist باستخدام productId
         const isThereItem = await AxiosConfig.get(`/wishlist?productId=eq.${productDetails.id}`);
 
         if (isThereItem.data.length > 0) {
-            const wishlistItemProductId = isThereItem.data[0].productId; // استخدم productId بدلاً من id
+            const wishlistItemProductId = isThereItem.data[0].productId;
 
-            // حذف العنصر من الـ wishlist باستخدام الـ productId
             await AxiosConfig.delete(`/wishlist?productId=eq.${wishlistItemProductId}`);
             return { type: "remove", id: productDetails.id };
         } else {
-            // إذا لم يكن العنصر موجود، أضفه إلى القائمة مع title
             await AxiosConfig.post("/wishlist", {
                 productId: productDetails.id,
                 title: productDetails.title,
@@ -74,11 +69,11 @@ const wishlistSlice = createSlice({
         builder.addCase(wishlistAction.fulfilled, (state, action) => {
             if (action.payload.type === "add") {
                 state.items.push({ id: action.payload.id, title: action.payload.title, price: action.payload.price, image: action.payload.image });
-                state.count += 1; // زيادة عدد العناصر في الـ wishlist
+                state.count += 1;
                 state.loading = false;
             } else {
                 state.items = state.items.filter((item) => item.id !== action.payload.id);
-                state.count -= 1; // تقليل عدد العناصر في الـ wishlist
+                state.count -= 1;
                 state.loading = false;
             }
         });
@@ -91,4 +86,3 @@ const wishlistSlice = createSlice({
 
 export { wishlistAction };
 export default wishlistSlice.reducer;
-
